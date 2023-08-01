@@ -1,0 +1,4 @@
+name: Guilds
+version: '1.0ALPHA'
+main: org.radium.guildsspigot.Core
+author: NBTC

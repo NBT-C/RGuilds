@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Radium-Guilds.iml" filepath="$PROJECT_DIR$/.idea/Radium-Guilds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clans-spigot/clans-spigot.iml" filepath="$PROJECT_DIR$/clans-spigot/clans-spigot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clans-proxy/guildsplugin.iml" filepath="$PROJECT_DIR$/clans-proxy/guildsplugin.iml" />
+    </modules>
+  </component>
+</project>

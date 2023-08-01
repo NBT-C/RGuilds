@@ -1,0 +1,175 @@
+Prefix: "&8┃ &aGuilds &8»&e "
+Command:
+  BlockedTag: "&c✖ This tag cannot be used."
+  BlockedName: "&c✖ This name cannot be used."
+  DontSpam: "&c✖ Please don't spam the command!"
+  NotAPlayer: "&cCannot run this command here."
+  InvaildNumber: "&c✖ That is not a number."
+  GuildNotFound: "&c✖ A guild with that name is not found"
+  PlayerNotInYourGuild: "&c✖ Player $player is not in your guild!"
+  PlayerNotFound: "&c✖ Player not found!"
+  NotInGuild: "&c✖ You are not in a guild!"
+  InAGuild: "&c✖ You are already in a guild!"
+  PlayerInAGuild: "&c✖ This player is already in a guild!"
+  PlayerNotInAGuild: "&c✖ This player is not in a guild!"
+  NotTheGuildLeader: "&c✖ You're not the guild leader!"
+  NoGuildPermission: "&c✖ You don't have the required Guild rank to do that."
+  Help: "&e✫ /guild help &6★ &7for help."
+  Guild:
+    SubCommands:
+      Help: |
+        &e
+        %prefix%&e✫ /guild help &6★ &7for help.
+        %prefix%&e✫ /guild create <name> <tag> &6★ &7Create a guild.
+        %prefix%&e✫ /guild disband &6★ &7Delete your guild.
+        %prefix%&e✫ /guild invite <player> &6★ &7Invite a player to guild.
+        %prefix%&e✫ /guild accept <guild> &6★ &7Accept a guild invite.
+        %prefix%&e✫ /guild kick <player> &6★ &7Kick a player from guild.
+        %prefix%&e✫ /guild leave &6★ &7Leave from the current guild.
+        %prefix%&e✫ /guild promote <player> &6★ &7Rankup a player.
+        %prefix%&e✫ /guild demote <player> &6★ &7Rankdown a player.
+        %prefix%&e✫ /guild get <player> &6★ &7Get player's guild.
+        %prefix%&e✫ /guild transfer <player> &6★ &7Transfer guild's ownership.
+        %prefix%&e✫ /guild chat <context> &6★ &7Send a guild message.
+        %prefix%&e✫ /guild stats <guild> &6★ &7Receive guild stats.
+        %prefix%&e✫ /guild list <guild> &6★ &7Receive guild players.
+        %prefix%&e✫ /guild rename <name> &6★ &7Update guild's name.
+        %prefix%&e✫ /guild setTag <tag> &6★ &7Update guild's tag.
+        %prefix%&e✫ /guild setColor <color> &6★ &7Update guild's color.
+        %prefix%&e✫ /guild topkills &6★ &7Top 10 guild kills.
+        %prefix%&e✫ /guild topdeaths &6★ &7Top 10 guild deaths.
+        %prefix%&e✫ /guild toppoints &6★ &7Top 10 guild points.
+      GuildCreation:
+        Usage: "&e✫ /guild create <name> <tag>"
+        NameTaken: "&c✖ Guild name is already used."
+        TagTaken: "&c✖ Guild tag is already used."
+        InvaildGuildName: "&c✖ &cName must be between {1} and {2} characters and contain only letters and numbers."
+        InvaildGuildTag: "&c✖ Tag must be between {1} and {2} characters and contain only letters and numbers."
+        GuildCreated: "&a✔ Guild &7$name [$tag]&a created successfully."
+      GuildDisband:
+        Usage: "&e✫ /guild disband"
+        GuildRemoved: "&a✔ Guild removed successfully!"
+        ToGuildMessage: "&c✫ The Guild you're in has been disbanded."
+      GuildInvite:
+        Usage: "&e✫ /guild invite <player>"
+        PlayerInvited: "&a✔ You have invited $player to the Guild &7$guild&a! he has 30 seconds to accept the invite."
+        PlayerReceiveInvite: "&a✫ You have been invited to the Guild &7$guild&a! You have 30 seconds to accept the invite (Click here to accept)"
+        InviteExpired: "&c✖ Invite from the Guild &7$guild&c has expired."
+        CantInviteYourself: "&c✖ You can't invite yourself!"
+        AlreadyInvited: "&c✖ Player is already invited!"
+      GuildAccept:
+        Usage: "&e✫ /guild accept <guild>"
+        Joined: "&a✔ You have joined the Guild $guild successfully."
+        ToGuildMessage: "&a✫ Player &7$player &ajoined the guild!"
+        NoInvite: "&c✖ You don't have an invite from this guild."
+      GuildKick:
+        Usage: "&e✫ /guild kick <player>"
+        PlayerCannotBeKicked: "&c✖ This player cannot be kicked."
+        CantKickYourself: "&c✖ You can't kick yourself."
+        Kicked: "&c✫ &cYou have been kicked from the Guild &7$guild&c!"
+        ToGuildMessage: "&a✫ Player &c$player &akicked from the guild&a!"
+      GuildPromote:
+        Usage: "&e✫ /guild promote <player>"
+        CantPromotePlayer: "&c✖ This player cannot be promoted."
+        CantPromoteYourself: "&c✖ You can't promote yourself."
+        ToGuildMessage: "&a✫ Player &7$player &ahas been promoted to $rank&a!"
+      GuildDemote:
+        Usage: "&e✫ /guild demote <player>"
+        CantDemotePlayer: "&c✖ This player cannot be demoted."
+        CantDemoteYourself: "&c✖ You can't demote yourself."
+        ToGuildMessage: "&a✫ Player &7$player &ahas been demoted to $rank&a!"
+      GuildGet:
+        Usage: "&e✫ /guild get <player>"
+        PlayerInGuild: "&a✫ Player &7$player&a is in the Guild &7$guild&a."
+        PlayerHasNoGuild: "&c✖ Player $player has no guild."
+      GuildTransfer:
+        Usage: "&e✫ /guild transfer <player>"
+        SelfTransfer: "&c✖ Cannot transfer the guild to yourself!"
+        ToGuildMessage: "&a✫ &7$player&a is the new Guild Master (Leader)"
+      GuildChat:
+        Usage: "&e✫ /guild chat <context>"
+        Format: "&8┃ &$color&l$guildUppercase &8┃ &7$rank &7$player &8» &f$message" #can use also $guildtag, $guild
+      GuildStats:
+        Usage: "&e✫ /guild stats <guild>"
+        Message: |
+          &e
+          %prefix%&7$guildUppercase Stats:
+          &e
+          %prefix%&eGlobal Kills: &f{1}
+          %prefix%&eGlobal Deaths: &f{2}
+          %prefix%&eGlobal Points: &f{3}
+      GuildList:
+        Usage: "&e✫ /guild list <guild>"
+        Message:
+          Header: "&8┃ &7List of players in $guildUppercase:\n"
+          Rest: |
+            &8┃ &e$rank &6★ &7(&c$offline&7, &a$online&7)
+            &8┃ &7$players
+          Footer: |
+            &8┃ &7Total players: &f$all
+            &8┃ &8➟ &aOnline: &f$totalonline
+            &8┃ &8➟ &cOffline: &f$totaloffline
+      GuildRename:
+        Usage: "&e✫ /guild rename <name>"
+        ToGuildMessage: "&a✫ Guild name have been changed to $newName"
+      GuildSetTag:
+        Usage: "&e✫ /guild setTag <tag>"
+        ToGuildMessage: "&a✫ Guild tag have been changed to $newTag"
+      GuildSetColor:
+        Usage: "&e✫ /guild setColor <color>"
+        InvaildColor: "&c✖ Invaild color code."
+        AlreadyTheSame: "&c✖ This color is already set there."
+        ToGuildMessage: "&a✫ Guild color have been changed to $newColor▉"
+      GuildLeave:
+        Usage: "&e✫ /guild leave"
+        Left: "&a✫ You have left from the guild $guild."
+        ToGuildMessage: "&a✫ Player &c$player &cleft the guild!"
+        LeaderOfGuild: "&c✖ You're the leader, Disband guild using /g disband."
+      GuildTopKills:
+        Usage: "&e✫ /guild topkills"
+        Message:
+          Header: "&8┃ &7TOP GUILD KILLS:\n"
+          Rest: "&8┃ &e#%RANK%. %COLOR%%GUILD% &8➟ &e%AMOUNT% kills."
+      GuildTopDeaths:
+        Usage: "&e✫ /guild topdeaths"
+        Message:
+          Header: "&8┃ &7TOP GUILD DEATHS:\n"
+          Rest: "&8┃ &e#%RANK%. %COLOR%%GUILD% &8➟ &e%AMOUNT% deaths."
+      GuildTopPoints:
+        Usage: "&e✫ /guild toppoints"
+        Message:
+          Header: "&8┃ &7TOP GUILD POINTS:\n"
+          Rest: "&8┃ &e#%RANK%. %COLOR%%GUILD% &8➟ &e%AMOUNT% points."
+  GuildAdmin:
+    SubCommands:
+      Help: |
+        &e
+        %prefix%&e✫ /gadmin help &6★ &7for help.
+        %prefix%&e✫ /gadmin deleteGuild <guild> &6★ &7Remove a guild.
+        %prefix%&c✫ /gadmin setLeader <guild> <player> <working on it> &6★ &7Set a new guild leader.
+        %prefix%&e✫ /gadmin kickFromGuild <player> &6★ &7Kick a player from his guild.
+        %prefix%&e✫ /gadmin addKills <guild> <amount> &6★ &7Add an amount of kills to a guild.
+        %prefix%&e✫ /gadmin addDeaths <guild> <amount> &6★ &7Add an amount of deaths to a guild.
+        %prefix%&e✫ /gadmin addPoints <guild> <amount> &6★ &7Add an amount of points to a guild.
+      GuildDelete:
+        Usage: "&e✫ /gadmin deleteGuild <guild>"
+        GuildRemoved: "&a✫ Guild deleted successfully."
+        ToGuildMessage: "&c✫ Guild has been deleted by an admin."
+      GuildSetLeader:
+        Usage: "&e✫ /gadmin setleader <guild> <player>"
+        PlayerInAnotherGuild: "&c✖ This player is already in another guild, use /gadmin kickFromGuild <player> to kick him."
+        ToGuildMessage: "&c✫ Guild leader has been transfered to {to} by an admin."
+        GuildLeaderChanged: "&a✫ Guild leader of Guild $guild has been changed from {from} to {to}!"
+      GuildKickFromGuild:
+        Usage: "&e✫ /gadmin kickFromGuild <player>"
+        CantKickLeader: "&c✖ Cannot kick a leader of a guild!"
+        Kicked: "&a✔ Player &c$player&a kicked successfully from the Guild $guild."
+      GuildAddKills:
+        Usage: "&e✫ /gadmin addKills <guild> <amount>"
+        Added: "&a✫ Added &7{amount}&a kills to Guild &7$guild"
+      GuildAddDeaths:
+        Usage: "&e✫ /gadmin addDeaths <guild> <amount>"
+        Added: "&a✫ Added &7{amount}&a deaths to Guild &7$guild"
+      GuildAddPoints:
+        Usage: "&e✫ /gadmin addPoints <guild> <amount>"
+        Added: "&a✫ Added &7{amount}&a points to Guild &7$guild"

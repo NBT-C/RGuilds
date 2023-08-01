@@ -1,0 +1,33 @@
+Language: en #Languages can be found on lang directory
+CommandCooldown: 1 #Time by seconds
+GuildCreate:
+  RequirePermission: false
+  Permission: guild.create
+  Message: "&c✖ You don't have permission for this."
+  MinimumNameLength: 3
+  MaximumNameLength: 16
+Points:
+  PointsCanBeNegative: false
+  RandomPoints:
+    Enabled: true
+    PerKill:
+      Minimum: 1
+      Maximum: 10
+    PerDeath:
+      Minimum: -1
+      Maximum: -5
+  PointsPerKill: 10 #RandomPoints must be disabled to use this
+  PointsPerDeath: -5 #RandomPoints must be disabled to use this
+GuildTag:
+  MinimumTagLength: 2
+  MaximumTagLength: 3
+BlockedGuildNames:
+  - some
+  - blocked
+  - names
+BlockedGuildTags:
+  - some
+  - blocked
+  - tags
+
+

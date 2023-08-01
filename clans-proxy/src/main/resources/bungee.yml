@@ -1,0 +1,4 @@
+name: Guilds
+version: '${project.version}'
+main: org.radium.guildsplugin.Core
+author: NBTC

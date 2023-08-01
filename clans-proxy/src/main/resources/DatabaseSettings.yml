@@ -1,0 +1,8 @@
+Database:
+  Host: 'localhost'
+  Port: 3306
+  Database: 'guilds'
+  Username: 'root'
+  Password: 'guilds'
+  DatabaseProperties: ''
+  MaximumPoolSize: 3

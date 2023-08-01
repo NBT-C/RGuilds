@@ -1,0 +1,37 @@
+###########################
+#Placeholders / To use on TAB or NAMETAGEDIT or anything that supports placeholderapi
+#
+# %guilds_guildname%
+# %guilds_guildtag%
+# %guilds_guildcolor
+# %guilds_guildRank
+#
+#THOSE PLACEHOLDERS CANNOT BE USED DOWN THERE, THERE ARE COMMENTS TO KNOW WHAT YOU SHOULD TYPE
+###########################
+FriendlyFire:
+  Enabled: true
+  AllowFishingRod: false #friendly fire must be disabled to use this
+  AllowBow: false #friendly fire must be disabled to use this
+Settings:
+  GuildName:
+    NotFound: "No Clan"
+  GuildTag:
+    NotFound: ""
+    Format: "%color%[%tag%]"
+  GuildColor:
+    NotFound: "&7"
+LabyMod:
+  EnableTitles: true #titles shown under player's name
+  EnableLabyModStatus: false #that will become on labychat server joined status
+  Titles:
+    Size: 0.8
+    Ranks:
+      MASTER: "&eLeader of the guild $guildUppercase" #you can use $guild for the orginal guild name
+      ADMINISTRATOR: "&4Administrator of the guild $guildUppercase"
+      MODERATOR: "&cStaff member of the guild $guildUppercase"
+      CHAMPION: "&eChampion of the guild $guildUppercase"
+      STRONG: "&6Champion of the guild $guildUppercase"
+      MEMBER: "&7Member of the guild $guildUppercase"
+  Status:
+    HasGuild: "&e&lRADIUM - &7(Guild: %GUILD%&7" # %GUILD% %GUILDUPPERCASE% %GUILDRANK% %GUILDTAG% %GUILDCOLOR%
+    HasNoGuild: "&e&lRADIUM - &cPlaying (GAME)"
